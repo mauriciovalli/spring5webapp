@@ -1,5 +1,7 @@
 package guru.springframework.spring5webapp.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +14,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@JsonIgnoreProperties({"authors", "publisher"})
 public class Book {
 
     @Id
