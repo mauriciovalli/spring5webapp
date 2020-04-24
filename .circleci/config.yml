@@ -17,6 +17,8 @@ workflows:
 
 jobs:
   build:
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
     steps:
       - maven/test # checkout, build, test, and upload test results
 
