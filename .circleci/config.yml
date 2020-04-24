@@ -20,7 +20,9 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-stretch
     steps:
-      - maven/test # checkout, build, test, and upload test results
+      - checkout,
+      - build,
+      - test
 
   deploy:
     docker:
